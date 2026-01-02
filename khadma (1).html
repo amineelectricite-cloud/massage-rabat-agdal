@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Jodi Pro Spa & Massage | أفضل مركز سبا وتدليك شامل في الرباط</title>
+    <meta name="description" content="استمتع بتجربة سبا شاملة في الرباط مع Jodi Pro Spa. جميع خدمات المساج، العناية بالبشرة، العلاج بالأعشاب، والاسترخاء في مكان واحد. احجز موعدك الآن.">
+    <meta name="keywords" content="سبا الرباط, مساج شامل, علاجات طبيعية, حمام مغربي, تدليك رباط, سبا كامل, جلسات استرخاء, علاج بالأعشاب, عناية بالبشرة, مساج احترافي">
+    <meta name="author" content="Jodi Pro Spa">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Jodi Pro Spa & Massage | مركز سبا متكامل في الرباط">
+    <meta property="og:description" content="جميع خدمات السبا والتدليك في مكان واحد. تجربة فاخرة تشمل المساج، العناية بالبشرة، العلاج الطبيعي والمزيد.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_MA">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HealthAndBeautyBusiness",
+        "name": "Jodi Pro Spa & Massage",
+        "image": "https://images.unsplash.com/photo-1600334129128-685c5582fd35",
+        "description": "مركز سبا وتدليك متكامل في الرباط يقدم جميع خدمات الاسترخاء والعناية",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "résidence Bismillah, 40, N° 3 Rue Tensift",
+            "addressLocality": "الرباط",
+            "addressCountry": "المغرب"
+        },
+        "telephone": "0640658543",
+        "openingHours": "Mo-Su 09:00-22:00",
+        "priceRange": "250-1500 درهم",
+        "url": "https://jodiprospa.com"
+    }
+    </script>
+
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark-gold: #a68545;
+            --bg-dark: #1a1612;
+            --card-bg: #25211d;
+            --text-light: #f4f4f4;
+            --text-gray: #b0b0b0;
+            --success: #25d366;
+            --primary: #2a6496;
+            --google-blue: #4285F4;
+            --google-green: #34A853;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-gold: linear-gradient(135deg, var(--gold), var(--dark-gold));
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Cairo', sans-serif; 
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body { 
+            background-color: var(--bg-dark); 
+            color: var(--text-light); 
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            background: rgba(26, 22, 18, 0.95);
+            padding: 18px 8%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            backdrop-filter: blur(15px);
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            padding: 12px 8%;
+            background: rgba(26, 22, 18, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-container { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+        }
+        
+        .logo-img {
+            height: 60px;
+            width: auto;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        
+        .logo-text { 
+            font-family: 'Amiri', serif; 
+            font-size: 1.8rem; 
+            color: var(--gold); 
+            letter-spacing: 1px; 
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-phone {
+            background: var(--gradient-gold);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .nav-phone:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(26, 22, 18, 0.8);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .hero h1 { 
+            font-family: 'Amiri', serif; 
+            font-size: 4rem; 
+            color: var(--gold); 
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p { 
+            font-size: 1.4rem; 
+            max-width: 700px; 
+            margin-bottom: 40px; 
+            color: var(--text-gray); 
+            line-height: 1.8;
+        }
+
+        .btn-main {
+            background: var(--gradient-gold);
+            color: #fff;
+            padding: 18px 45px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+        }
+        
+        .btn-main:hover { 
+            background: transparent; 
+            color: var(--gold); 
+            border-color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(197, 160, 89, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold);
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: var(--transition);
+            border: 2px solid var(--gold);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-secondary:hover { 
+            background: var(--gold); 
+            color: white; 
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            right: 50%;
+            transform: translateX(50%);
+            color: var(--gold);
+            font-size: 1.8rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            background: rgba(26, 22, 18, 0.8);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(197, 160, 89, 0.3);
+            transition: var(--transition);
+        }
+
+        .scroll-indicator:hover {
+            background: rgba(197, 160, 89, 0.1);
+            border-color: var(--gold);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(50%); }
+            40% { transform: translateY(-10px) translateX(50%); }
+            60% { transform: translateY(-5px) translateX(50%); }
+        }
+
+        /* --- Services --- */
+        .section { 
+            padding: 100px 8%; 
+        }
+        
+        .section-header { 
+            text-align: center; 
+            margin-bottom: 60px; 
+        }
+        
+        .section-header h2 { 
+            font-family: 'Amiri', serif; 
+            font-size: 3rem; 
+            color: var(--gold); 
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+        
+        .section-header p {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Tabs */
+        .services-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: var(--card-bg);
+            color: var(--text-light);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .tab-btn.active {
+            background: var(--gradient-gold);
+            color: white;
+            border-color: var(--gold);
+            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.2);
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .service-image {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-gold);
+            transform: translateY(-100%);
+            transition: var(--transition);
+            z-index: 1;
+        }
+        
+        .service-card:hover::before {
+            transform: translateY(0);
+        }
+        
+        .service-card:hover { 
+            border-color: var(--gold); 
+            transform: translateY(-8px); 
+            box-shadow: var(--shadow);
+        }
+        
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+        
+        .service-card i { 
+            font-size: 2rem; 
+            color: var(--gold); 
+            margin-bottom: 15px; 
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--text-light);
+            min-height: 3.2rem;
+        }
+        
+        .service-card p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            flex-grow: 1;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .price-tag { 
+            font-size: 1.6rem; 
+            color: var(--gold); 
+            font-weight: bold; 
+            margin-top: auto; 
+            display: block;
+            background: rgba(197, 160, 89, 0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            align-self: flex-start;
+        }
+
+        .duration {
+            display: block;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        .service-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--gradient-gold);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* --- Packages Section --- */
+        .packages-section {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #1e1a16 100%);
+        }
+
+        .packages-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .package-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card.popular {
+            border: 2px solid var(--gold);
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .package-card.popular::before {
+            content: 'الأكثر طلباً';
+            position: absolute;
+            top: 20px;
+            left: -30px;
+            background: var(--gradient-gold);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(-45deg);
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .package-icon {
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: rgba(197, 160, 89, 0.1);
+        }
+
+        .package-card h3 {
+            font-size: 1.6rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-family: 'Amiri', serif;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .package-price span {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 25px 0;
+            text-align: right;
+            padding: 0 10px;
+        }
+
+        .package-features li {
+            padding: 8px 0;
+            color: var(--text-gray);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .package-features li i {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        .package-features li.disabled {
+            color: #666;
+            text-decoration: line-through;
+        }
+
+        .package-features li.disabled i {
+            color: #666;
+        }
+
+        .package-savings {
+            background: rgba(37, 211, 102, 0.1);
+            color: var(--success);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+
+        /* --- About Section --- */
+        .about-section {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #1e1a16 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            height: 500px;
+            border-radius: 20px;
+            background: url('taswira.jpeg') center/cover;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(197, 160, 89, 0.1), transparent);
+        }
+
+        .about-content h3 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-family: 'Amiri', serif;
+        }
+
+        .about-content p {
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .features-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .features-list li i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* --- Testimonials --- */
+        .testimonials-section {
+            background: linear-gradient(135deg, #1e1a16 0%, var(--card-bg) 100%);
+        }
+
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 4rem;
+            color: var(--gold);
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .testimonial-content {
+            color: var(--text-gray);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: var(--gold);
+            font-size: 0.85rem;
+        }
+
+        /* --- Contact Section --- */
+        .contact-box {
+            background: var(--card-bg);
+            border-radius: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        .contact-info { 
+            padding: 50px; 
+        }
+        
+        .contact-info h2 {
+            color: var(--gold);
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        
+        .info-item { 
+            display: flex; 
+            align-items: flex-start; 
+            gap: 20px; 
+            margin-bottom: 25px; 
+        }
+        
+        .info-item i { 
+            font-size: 1.4rem; 
+            color: var(--gold); 
+            margin-top: 5px;
+        }
+        
+        .info-content h4 {
+            color: var(--text-light);
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .info-content p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Address Link Styles */
+        .address-link {
+            color: var(--gold);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: var(--transition);
+            font-weight: 600;
+            padding: 8px 0;
+        }
+
+        .address-link:hover {
+            color: var(--dark-gold);
+            text-decoration: underline;
+        }
+
+        .directions-btn {
+            display: inline-block;
+            background: rgba(197, 160, 89, 0.1);
+            color: var(--gold);
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            margin-top: 5px;
+        }
+
+        .directions-btn:hover {
+            background: var(--gold);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.2);
+        }
+
+        .map-container {
+            position: relative;
+            min-height: 450px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Contact Tips */
+        .contact-tips {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(197, 160, 89, 0.05);
+            border-radius: 15px;
+            border-right: 3px solid var(--gold);
+        }
+
+        .contact-tips h4 {
+            color: var(--gold);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-tips p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* --- Floating Actions --- */
+        .fixed-booking {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .call-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transition: var(--transition);
+            position: relative;
+            background: var(--gradient-gold);
+            color: white;
+        }
+
+        .call-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, var(--success), #1da851);
+        }
+
+        .map-btn {
+            background: linear-gradient(135deg, var(--google-blue), var(--google-green));
+        }
+
+        .tooltip {
+            position: absolute;
+            left: 80px;
+            background: var(--card-bg);
+            color: var(--text-light);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            border: 1px solid var(--gold);
+            pointer-events: none;
+        }
+
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 8px 0 8px 8px;
+            border-style: solid;
+            border-color: transparent transparent transparent var(--card-bg);
+        }
+
+        .call-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            left: 85px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: linear-gradient(135deg, #15110c 0%, var(--bg-dark) 100%);
+            padding: 50px 8% 25px;
+            border-top: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 35px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            transform: translateX(-5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(197, 160, 89, 0.1);
+            border-radius: 50%;
+            color: var(--gold);
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--bg-dark);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(197, 160, 89, 0.1);
+            color: var(--text-gray);
+            font-size: 0.85rem;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Service Card Animations */
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+        .service-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(197, 160, 89, 0.1);
+            border-top: 4px solid var(--gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 1200px) {
+            .services-container {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            
+            .packages-container {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .about-container,
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                padding: 40px;
+            }
+            
+            .map-container {
+                min-height: 400px;
+            }
+            
+            .package-card.popular {
+                transform: scale(1);
+            }
+            
+            .services-tabs {
+                gap: 8px;
+            }
+            
+            .tab-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 5%;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 100%;
+                background: var(--bg-dark);
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                border-top: 1px solid rgba(197, 160, 89, 0.2);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-phone {
+                justify-content: center;
+                width: 100%;
+                margin-top: 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section {
+                padding: 80px 5%;
+            }
+            
+            .services-container,
+            .packages-container,
+            .testimonials-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-tabs {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .tab-btn {
+                width: 100%;
+                max-width: 300px;
+                padding: 12px;
+            }
+            
+            .fixed-booking {
+                left: 20px;
+                bottom: 20px;
+            }
+            
+            .call-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.4rem;
+            }
+            
+            .about-image {
+                height: 350px;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-info {
+                padding: 30px;
+            }
+            
+            .tooltip {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .btn-main {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                padding: 25px 15px;
+            }
+            
+            .package-card {
+                padding: 25px 20px;
+            }
+            
+            .service-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .about-container {
+                gap: 40px;
+            }
+            
+            .info-item {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .info-item i {
+                margin-top: 0;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .fixed-booking,
+            .mobile-menu-btn,
+            .scroll-indicator {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .hero {
+                background: white !important;
+                color: black !important;
+                height: auto !important;
+            }
+            
+            .hero-content {
+                background: white !important;
+                border: 1px solid #ddd !important;
+            }
+            
+            a {
+                color: black !important;
+                text-decoration: underline !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <div class="logo-container">
+            <img src="taswira.jpeg" alt="Jodi Pro Spa Logo" class="logo-img">
+            <span class="logo-text">JODI PRO SPA</span>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Principal</a>
+            <a href="#services">Tous  les services </a>
+            <a href="#packages"> Forfaits spa</a>
+            <a href="#about">Qui sommes-nous ?</a>
+            <a href="#testimonials">Avis clients</a>
+            <a href="#contact"> contactez nous</a>
+            <a href="tel:0640658543" class="nav-phone">
+                <i class="fas fa-phone"></i>
+                06 40 65 85 43
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up">
+            <h1> Une expérience spa complète </h1>
+            <p>Des services de spa tout compris sous un même toit. Offrez-vous une expérience de détente luxueuse incluant massages, soins du visage, soins naturels et bien plus encore. .</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                <a href="#services" class="btn-main">
+                    <i class="fas fa-spa"></i>
+                   Découvrez tous nos services                </a>
+                <a href="tel:0640658543" class="btn-secondary">
+                    <i class="fas fa-phone"></i>
+                Réservez directement                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator" aria-label="انتقل إلى القسم التالي">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="section-header">
+            <h2>   Tous les services de spa complets</h2>
+            <p>Découvrez notre large gamme de traitements et services spécialisés</p>
+        </div>
+    
+
+        <div class="services-container">
+            <!-- Massage Services -->
+            <div class="service-card" data-aos="fade-up">
+                <span class="service-badge">التدليك</span>
+                <img src="https://lejadespa.com/wp-content/uploads/2021/06/MASSAGE-RELAXANT.jpeg" alt="MASSAGE RELAXANT" class="service-image">
+                <div class="service-content">
+                    <i class="fas fa-hands"></i>
+                    <h3>MASSAGE RELAXANT</h3>
+                    <p>Procure plusieurs vertus, son application régulière permet : D'éliminer le stress, la dépression et les autres signes de nervosité.</p>
+                    <span class="price-tag">300 dirhams</span>
+                    <span class="duration"></span>
+                </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <span class="service-badge">التدليك</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcOQK5HC1VC_dYK4ufgKPq1hxrlN02inzCeA&s
+                ">
+                <div class="service-content">
+                    <i class="fas fa-hand-rock"></i>
+                    <h3>MASSAGE TONIQUE</h3>
+                    <p>Recommandé pour les corps en manque d'énergie, ce massage musculaire dynamisant et puissant décontracte en profondeur.</p>
+                    <span class="price-tag">300 dirhams</span>
+                    <span class="duration"></span>
+                </div>
+            </div>
+           
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <span class="service-badge">البشرة</span>
+                <img src="data:image/jpeg;base64,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">
+                <div class="service-content">
+                    <i class="fas fa-user-md"></i>
+                    <h3>MASSAGE DU DOS</h3>
+                    <p>En plus de soulager vos douleurs, le massage du dos est idéal pour dénouer les blocages énergétiques et se détendre.</p>
+                    <span class="price-tag">300 dirhams</span>
+                    <span class="duration"></span>
+                </div>
+            </div>
+            
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <span class="service-badge">الجسم</span>
+                <img src="data:image/jpeg;base64,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" alt="حمام مغربي" class="service-image">
+                <div class="service-content">
+                    <i class="fas fa-bath"></i>
+                    <h3>MASSAGE SUÉDOIS</h3>
+                    <p>Massage Suédois : Une technique de massage dynamique qui vise à dissoudre les tensions et à raffermir les muscles et les articulations.</p>
+                    <span class="price-tag">300 درهم</span>
+                    <span class="duration"></span>
+                </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <span class="service-badge">متخصص</span>
+                <img src="https://www.thalispa.com/sites/default/files/2021/09/istockphoto-1296641494-612x612.jpg" alt="تدليك القدمين" class="service-image">
+                <div class="service-content">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>MASSAGE à 4 MAINS</h3>
+                    <p>Ce massage offre un moment de détente et de relaxation incomparable. L'expérience du massage synchronisé et symétrique à 4 mains.</p>
+                    <span class="price-tag">400 dirhams</span>
+                    <span class="duration"> </span>
+                </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                <span class="service-badge">متخصص</span>
+                <img src="https://www.marrakechsunset.com/images/blog/what_is_a_traditional_moroccan_hammam.jpg" alt="مساج للرياضيين" class="service-image">
+                <div class="service-content">
+                    <i class="fas fa-leaf"></i>
+                    <h3>HAMMAM MAROCAIN AU HERBES</h3>
+                    <p>Un bain de chaleur humide très différent du sauna qui est, lui, à base de chaleur sèche. Il est aussi différent du bain turc.</p>
+                    <span class="price-tag">300 dirhams</span>
+                    <span class="duration"> </span>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;">
+            <p style="color: var(--gold); font-size: 1.1rem;">
+                <i class="fas fa-info-circle"></i>
+                Nous proposons encore plus de services ! Contactez-nous pour découvrir tous les services disponibles (plus de 40 services spécialisés).
+
+            </p>
+            <a href="tel:0640658543" class="btn-main" style="margin-top: 20px;">
+                <i class="fas fa-phone"></i>
+                Appelez-nous pour en savoir plus sur tous nos services.
+            </a>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="section packages-section">
+        <div class="section-header">
+            <h2> Forfaits spa tout compris </h2>
+            <p>Économisez davantage grâce à nos forfaits complets qui combinent les meilleurs services à des prix compétitifs.</p>
+        </div>
+        
+        <div class="packages-container">
+            <div class="package-card" data-aos="fade-up">
+                <div class="package-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3>PACK STANDARD</h3>
+                <div class="package-price">650 <span>dirhams</span></div>
+                <div class="package-savings">Économie de 150 dirhams</div>
+                <p>HAMMAM + MASSAGE SUÉDOIS = Hammam + Enveloppement + Gommage + Masque du corps ghassoul + Savonnage Séance De Détente Massage Relaxant Ou Suédois Tonifiant</p>
+                <a href="tel:0640658543" class="btn-main" style="width: 100%; justify-content: center; margin-top: 20px;">
+                    <i class="fas fa-calendar-alt"></i>
+                    Résevez le forfait 
+                </a>
+            </div>
+            
+            <div class="package-card popular" data-aos="fade-up" data-aos-delay="100">
+                <div class="package-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h3>PACK VIP</h3>
+                <div class="package-price">950 <span>dirhams</span></div>
+                <div class="package-savings"> Économie de 300 dirhams </div>
+                <p>HAMMAM ROYAL + MASSAGE SUÉDOIS = Hammam + Enveloppement + Gommage + Masque du corps ghassoul + Savonnage Séance De Détente Massage Relaxant Ou Suédois Tonifiant</p>
+                <a href="tel:0640658543" class="btn-main" style="width: 100%; justify-content: center; margin-top: 20px;">
+                    <i class="fas fa-gem"></i>
+                    اLe forfait le plus demandé
+                </a>
+            </div>
+            
+            <div class="package-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="package-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>PACK ROYAL</h3>
+                <div class="package-price">1800 <span>dirhams</span></div>
+                <div class="package-savings"> Économie de 500 dirhams </div>
+                <p>HAMMAM ROYAL + MASSAGE A QUATRE MAINS = Hammam + Enveloppement + Gommage + Masque du corps ghassoul + Savonnage Séance De Détente Massage Relaxant Ou Suédois Tonifiant</p>
+                <a href="tel:0640658543" class="btn-main" style="width: 100%; justify-content: center; margin-top: 20px;">
+                    <i class="fas fa-heart"></i>
+                     Le forfait spéciale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="section-header">
+            <h2> Qui sommes-nous ?</h2>
+            <p>Centre de spa Jodi Pro - Votre destination unique pour le soin et la détent</p>
+        </div>
+        <div class="about-container">
+            <div class="about-image" data-aos="fade-right"></div>
+            <div class="about-content" data-aos="fade-left">
+                <h3>  Tous les services de spa en un seul endroit</h3>
+                <p>hez Jodi Pro Spa, nous proposons une expérience spa holistique qui allie les traditions marocaines authentiques aux techniques modernes internationales. Nous sommes convaincus que les soins holistiques sont la clé d'une vie équilibrée et saine.</p>
+                <p> Avec plus de 40 services spécialisés, nous répondons à tous vos besoins de détente et de soins personnels dans un environnement luxueux et paisible </p>
+                
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Plus de 40 services de spa spécialisés</li>
+                    <li><i class="fas fa-check-circle"></i> Produits 100% naturels et biologiques</li>
+                    <li><i class="fas fa-check-circle"></i> Thérapeutes certifiés à l'échelle internationale</li>
+                    <li><i class="fas fa-check-circle"></i> Installations modernes équipées des technologies les plus récentes</li>
+                    <li><i class="fas fa-check-circle"></i> Des programmes de traitement adaptés à chaque client</li>
+                </ul>
+                
+                <div style="display: flex; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
+                    <a href="tel:0640658543" class="btn-main">
+                        <i class="fas fa-phone"></i>
+                        Renseignez-vous sur tous les services
+                    </a>
+                    <a href="#services" class="btn-secondary">
+                        <i class="fas fa-eye"></i>
+                        Afficher tous les services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="section-header">
+            <h2> L'avis de nos clients</h2>
+            <p>Que disent nos clients de leur expérience globale chez Jodi Pro Spa ?</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial-card" data-aos="fade-up">
+                <div class="testimonial-content">
+                    " J'ai testé tous leurs services, du massage aux soins du visage. Tout est excellent ! Le centre est propre et le service est professionnel. Je le recommande vivement. "
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">س</div>
+                    <div class="author-info">
+                        <h4> Sarah Ahmed</h4>
+                        <p>   Client régulier depuis 2021</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-content">
+                    "  Après cette séance de soins complète, je me sentais comme une nouvelle personne. Le bain marocain était merveilleux et le massage excellent. Je reviendrai régulièrement.  "
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">م</div>
+                    <div class="author-info">
+                        <h4> Mohammed Al-Khaldi</h4>
+                        <p>Abonnez-vous au forfait or</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-content">
+                    "J'ai testé la formule pour couples avec mon mari et ce fut une expérience inoubliable. La chambre privée est magnifique et le service impeccable. Je la recommande pour célébrer des occasions spéciales.."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">ن</div>
+                    <div class="author-info">
+                        <h4>  Nour El Hoda et Omar</h4>
+                        <p>  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="contact-box">
+            <div class="contact-info">
+                <h2>Contactez-nous</h2>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="info-content">
+                        <h4>العنوان</h4>
+                        <a href="https://maps.app.goo.gl/gKpoCp2KU9GFcT5aA?g_st=com.google.maps.preview.copy" 
+                           target="_blank" class="address-link">
+                            résidence Bismillah, 40, N° 3 Rue Tensift, Rabat
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="https://maps.app.goo.gl/gKpoCp2KU9GFcT5aA?g_st=com.google.maps.preview.copy" 
+                           target="_blank" class="directions-btn">
+                            <i class="fas fa-directions"></i> Obtenir un itinérairr
+                        </a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="info-content">
+                        <h4>Numéro de téléphone pour les réservations et les demandes de renseignements</h4>
+                        <p>06 40 65 85 43</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div class="info-content">
+                        <h4>أوقات العمل</h4>
+                        <p> Tous les jours de 10h00 à 22h00</p>
+                        <p style="color: var(--gold); font-size: 0.9rem; margin-top: 5px;">
+                            <i class="fas fa-calendar-check"></i>
+                             Réserver à l'avance vous garantit un horaire convenable.
+                        </p>
+                    </div>
+                </div>
+               
+                
+                <div class="contact-tips">
+                    <h4><i class="fas fa-star"></i> Conseils pour une expérience optimale</h4>
+                    <p>
+                        • • Réservez à l'avance pour garantir votre créneau horaire préféré.<br>
+                        • Nous vous recommandons d'arriver 15 minutes à l'avance.<br>
+                        •  Veuillez nous informer de tout problème de santé particulier<br>
+                        • Nos forfaits sont personnalisables selon vos besoins.
+                    </p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.241!2d-6.84!3d33.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU4JzEyLjAiTiA2wrA1MCcyNC4wIldc!5e0!3m2!1sfr!2sma!4v1620000000000!5m2!1sfr!2sma" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="موقع Jodi Pro Spa في الرباط"
+                    aria-label="خريطة توضح موقع Jodi Pro Spa في الرباط">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>JODI PRO SPA</h3>
+                <p>مركز سبا متكامل في الرباط، يقدم جميع خدمات العناية والاسترخاء بمعايير عالمية في بيئة فاخرة وهادئة.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>جميع الخدمات</h3>
+                <ul class="footer-links">
+                    <li><a href="#services"><i class="fas fa-chevron-left"></i> جميع خدمات المساج</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-left"></i> العناية بالبشرة والوجه</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-left"></i> علاجات الجسم المتكاملة</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-left"></i> جلسات السبا والاسترخاء</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-left"></i> العلاجات المتخصصة</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>معلومات الحجز</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://maps.google.com/?q=résidence Bismillah, 40, N° 3 Rue Tensift, Rabat" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i>
+                            الرباط، المغرب
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:0640658543">
+                            <i class="fas fa-phone"></i>
+                            06 40 65 85 43
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@jodiprospa.com">
+                            <i class="fas fa-envelope"></i>
+                            info@jodiprospa.com
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar"></i>
+                         Réserver à l'avance vous garantit un horaire convenable
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3> Forfaits Premium</h3>
+                <ul class="footer-links">
+                    <li><a href="#packages"><i class="fas fa-crown"></i> Le forfait or complet</a></li>
+                    <li><a href="#packages"><i class="fas fa-heart"></i>  le forfait or complet </a></li>
+                    <li><a href="#packages"><i class="fas fa-spa"></i> Forfait détente quotidienne</a></li>
+                    <li><a href="#packages"><i class="fas fa-infinity"></i> Abonnement mensuel Gold</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p> Tous droits réservés © 2026 &copy; <span id="currentYear"></span>   Jodi Pro Spa & Massage. Conçu et développé avec ❤️ pour votre confort</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed-booking">
+        <a href="https://maps.google.com/?q=résidence Bismillah, 40, N° 3 Rue Tensift, Rabat" 
+           class="call-btn map-btn" 
+           target="_blank"
+           aria-label="فتح خرائط جوجل للاتجاهات">
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="tooltip">الاتجاهات إلى المركز</span>
+        </a>
+        <a href="https://wa.me/212640658543?text=مرحباً، أريد الاستفسار عن خدمات السبا المتوفرة" 
+           class="call-btn whatsapp-btn" 
+           target="_blank"
+           aria-label="تواصل معنا عبر واتساب">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">استفسر عن جميع الخدمات</span>
+        </a>
+        <a href="tel:0640658543" 
+           class="call-btn" 
+           aria-label="اتصل بنا للحجز">
+            <i class="fas fa-phone"></i>
+            <span class="tooltip">احجز موعدك الآن</span>
+        </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Page Loader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loader').classList.add('hidden');
+                document.body.classList.add('loaded');
+                setTimeout(() => {
+                    document.getElementById('loader').style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const isActive = navLinks.classList.contains('active');
+            mobileMenuBtn.innerHTML = isActive 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.setAttribute('aria-label', isActive ? 'إغلاق القائمة' : 'فتح القائمة');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                mobileMenuBtn.setAttribute('aria-label', 'فتح القائمة');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                mobileMenuBtn.setAttribute('aria-label', 'فتح القائمة');
+            }
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+        });
+        
+        // Scroll indicator
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        scrollIndicator.addEventListener('click', () => {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Service tabs functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const serviceCards = document.querySelectorAll('.service-card');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                tabBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const category = btn.dataset.category;
+                
+                // Show/hide services based on category
+                serviceCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'flex';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add current year to copyright
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Console log for SEO verification
+        console.log('%cJodi Pro Spa - مركز سبا متكامل مع جميع الخدمات في الرباط', 
+                    'color: #c5a059; font-size: 16px; font-weight: bold;');
+        console.log('%c40+ خدمة سبا متخصصة - أسعار تنافسية - خدمة احترافية', 
+                    'color: #a68545;');
+        console.log('%cالعنوان: résidence Bismillah, 40, N° 3 Rue Tensift, Rabat', 
+                    'color: #f4f4f4;');
+        console.log('%cالهاتف: 06 40 65 85 43', 
+                    'color: #25d366; font-weight: bold;');
+        
+        // Package hover effect
+        const packageCards = document.querySelectorAll('.package-card');
+        packageCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                if (!card.classList.contains('popular')) {
+                    card.style.transform = 'translateY(-10px)';
+                    card.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                if (!card.classList.contains('popular')) {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = 'none';
+                }
+            });
+        });
+        
+        // Auto scroll to top on refresh
+        window.onbeforeunload = function() {
+            window.scrollTo(0, 0);
+        };
+        
+        // Service card animation on hover
+        serviceCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.zIndex = '10';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.zIndex = '1';
+            });
+        });
+        
+        // Address link click tracking
+        document.querySelectorAll('.address-link, .directions-btn').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('تم النقر على رابط العنوان / الاتجاهات');
+            });
+        });
+        
+        // Phone call tracking
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('تم طلب الاتصال بالرقم: ' + this.href.replace('tel:', ''));
+            });
+        });
+        
+        // WhatsApp tracking
+        document.querySelectorAll('a[href*="whatsapp"]').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('تم فتح دردشة واتساب');
+            });
+        });
+        
+        // Lazy load images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img[data-src]');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(img => imageObserver.observe(img));
+        });
+        
+        // Add loading animation to buttons
+        document.querySelectorAll('.btn-main, .btn-secondary').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (this.getAttribute('href') && !this.getAttribute('href').startsWith('#')) {
+                    const originalContent = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري التحميل...';
+                    this.style.pointerEvents = 'none';
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalContent;
+                        this.style.pointerEvents = 'auto';
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
